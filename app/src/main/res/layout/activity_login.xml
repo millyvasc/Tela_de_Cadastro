@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Login"
+    android:background="#FFFFFF">
+
+    <Button
+        android:id="@+id/botaoL"
+        style="@style/All"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:width="400px"
+        android:height="150px"
+        android:gravity="center"
+        android:text="LOGAR"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senhaL" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="10dp"
+        android:text="LOGIN"
+        android:textColor="#6750A3"
+        android:gravity="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/All"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoRedirectC"
+        style="@style/btnRedirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Não tenho uma conta!"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoL"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="17dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/loginimages_removebg_preview" />
+
+    <EditText
+        android:id="@+id/emailL"
+        style="@style/Inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="15dp"
+        android:width="900px"
+        android:drawableEnd="@drawable/baseline_email_24"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/Labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="5dp"
+        android:text="Senha:"
+        app:layout_constraintBottom_toTopOf="@+id/senhaL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailL" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="322dp"
+        android:layout_marginBottom="2dp"
+        android:text="Email:"
+        app:layout_constraintBottom_toTopOf="@+id/emailL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/senhaL"
+        style="@style/Inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="18dp"
+        android:width="900px"
+        android:drawableEnd="@drawable/baseline_password_24"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/botaoL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

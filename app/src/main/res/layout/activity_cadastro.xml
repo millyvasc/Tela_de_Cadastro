@@ -7,22 +7,21 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/titulo"
+        style="@style/All"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="CADASTRE-SE"
         android:textSize="34sp"
-        style="@style/All"
         android:textStyle="bold" />
 
-
     <ImageView
-        android:id="@+id/cadastro"
-        android:layout_width="290dp"
-        android:layout_height="249dp"
-        app:srcCompat="@drawable/cadastro"
-        style="@style/All"/>
+        android:id="@+id/img"
+        style="@style/All"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/cadastro" />
 
     <TextView
         android:id="@+id/textView8"
@@ -32,10 +31,11 @@
         android:text="Nome:" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/nome"
+        style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Inputs"
+        android:drawableEnd="@drawable/baseline_person_2_24"
         android:ems="10"
         android:inputType="text" />
 
@@ -47,10 +47,11 @@
         android:text="Email:"/>
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/email"
+        style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Inputs"
+        android:drawableEnd="@drawable/baseline_email_24"
         android:ems="10"
         android:inputType="textEmailAddress" />
 
@@ -62,10 +63,11 @@
         android:text="Senha:" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/senha"
+        style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Inputs"
+        android:drawableEnd="@drawable/baseline_password_24"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -77,31 +79,28 @@
         android:text="Telefone:"/>
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/telefone"
+        style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Inputs"
+        android:drawableEnd="@drawable/baseline_local_phone_24"
         android:ems="10"
         android:inputType="phone" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botao"
         android:layout_width="159dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30px"
         android:text="CADASTRAR"
         android:textStyle="bold"
         style="@style/All"/>
+    <!-- Botão compativel com drawlabel:   <androidx.appcompat.widget.AppCompatButton-->
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Já tenho uma conta"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        style="@style/All"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoRedirectL"
+        style="@style/btnRedirect"
+        android:text="Já tenho uma conta!"/>
+
 
 </LinearLayout>
