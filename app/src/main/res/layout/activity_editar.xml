@@ -1,37 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/titulo"
         style="@style/All"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="170px"
         android:gravity="center"
-        android:text="CADASTRE-SE"
+        android:text="EDITAR CONTA"
         android:textSize="34sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/img"
-        style="@style/All"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:srcCompat="@drawable/cadastro" />
-
     <TextView
         android:id="@+id/textView8"
+        style="@style/Labels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Labels"
+        android:layout_marginTop="180px"
         android:text="Nome:" />
 
     <EditText
-        android:id="@+id/nomeC"
+        android:id="@+id/nomeE"
         style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,13 +34,14 @@
 
     <TextView
         android:id="@+id/textView3"
+        style="@style/Labels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Labels"
-        android:text="Email:"/>
+        android:layout_marginTop="80px"
+        android:text="Email:" />
 
     <EditText
-        android:id="@+id/emailC"
+        android:id="@+id/emailE"
         style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,13 +51,14 @@
 
     <TextView
         android:id="@+id/textView4"
+        style="@style/Labels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Labels"
+        android:layout_marginTop="80px"
         android:text="Senha:" />
 
     <EditText
-        android:id="@+id/senhaC"
+        android:id="@+id/senhaE"
         style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,13 +68,14 @@
 
     <TextView
         android:id="@+id/textView5"
+        style="@style/Labels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Labels"
-        android:text="Telefone:"/>
+        android:layout_marginTop="80px"
+        android:text="Telefone:" />
 
     <EditText
-        android:id="@+id/telefoneC"
+        android:id="@+id/telefoneE"
         style="@style/Inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -88,17 +84,12 @@
         android:inputType="phone" />
 
     <Button
-        android:id="@+id/botao"
+        android:id="@+id/btnEditar"
+        style="@style/All"
         android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30px"
-        android:text="CADASTRAR"
-        android:textStyle="bold"
-        style="@style/All"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaoRedirectL"
-        style="@style/btnRedirect"
-        android:text="Já tenho uma conta!"/>
+        android:layout_marginTop="180px"
+        android:text="EDITAR"
+        android:textStyle="bold" />
 
 </LinearLayout>

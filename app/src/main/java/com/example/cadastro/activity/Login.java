@@ -1,6 +1,5 @@
 package com.example.cadastro.activity;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,15 +28,34 @@ public class Login extends AppCompatActivity {
         botaoL = findViewById(R.id.botaoL);
         botaoRedirectC = findViewById(R.id.botaoRedirectC);
 
+        SharedPreferences sp = getSharedPreferences("appCadastro", Context.MODE_PRIVATE);
+        String logado = sp.getString("email","");
+
+        if(!logado.equals("")) {
+            Intent it = new Intent(Login.this, Home.class);
+            startActivity(it);
+        }
+
         botaoL.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                if(emailL.getText().toString().isEmpty()){
+                    emailL.setError("Campo obrigatório!");
+                }
+                if(senhaL.getText().toString().isEmpty()){
+                    senhaL.setError("Campo obrigatório!");
+                }
+
                 if(emailL.getText().toString().isEmpty() || senhaL.getText().toString().isEmpty()){
                     Toast.makeText(Login.this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     uDao = new UserDAO(getApplicationContext(), new User(emailL.getText().toString(), senhaL.getText().toString()));
-                    if (uDao.verificarLogin()) { // True -> Redirecionando pra Home
+                    if (uDao.verificarLogin()) { // True - Redirecionando pra Home
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("email", emailL.getText().toString());
+                        editor.commit();
+
                         Intent it = new Intent(Login.this, Home.class);
                         startActivity(it);
                     } else { //False
@@ -50,7 +68,6 @@ public class Login extends AppCompatActivity {
         botaoRedirectC.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                // -> Redirect - Tela de Cadastro
                 Intent it = new Intent(Login.this, Cadastro.class);
                 startActivity(it);
             }
